@@ -1,0 +1,30 @@
+//main: ../style.less
+.nav__menu {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+.nav__link {
+  text-decoration: none;
+  color: @blue;
+  margin-right: 4rem;
+  font-family: @josefin;
+  font-weight: 700;
+  font-size: 1.2rem;
+  &::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    background-color: @orange;
+    transition: width 0.4s linear;
+  }
+  &:hover {
+    &::after {
+      width: 100%;
+    }
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,32 @@
+//main: ../style.less
+.burger__button {
+  display: none;
+}
+.burger__icon {
+  content: "";
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 3px;
+  background-color: @gray-l;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 3px;
+    background-color: @gray-l;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    z-index: 1;
+    width: 40px;
+    height: 3px;
+    background-color: @gray-l;
+  }
+}
