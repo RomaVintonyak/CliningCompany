@@ -1,0 +1,42 @@
+//main: ../style.less
+.slider__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 2rem;
+  transition: background-color 0.4s linear;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: @blue;
+
+    span {
+      border-color: @white;
+    }
+    &:active {
+      background-color: @blue-l;
+    }
+  }
+}
+.slider__next {
+  width: 15px;
+  height: 15px;
+  border-right: 2px solid @blue;
+  border-bottom: 2px solid @blue;
+  transform: rotate(-45deg);
+  transition: border-color 0.4s linear;
+}
+.slider__prev {
+  width: 15px;
+  height: 15px;
+  border-left: 2px solid @blue;
+  border-bottom: 2px solid @blue;
+  transform: rotate(45deg);
+  transition: border-color 0.4s linear;
+}

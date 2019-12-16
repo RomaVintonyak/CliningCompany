@@ -37,3 +37,12 @@
 .white{
   color: @white;
 }
+.zoomIn{
+  transition: transform 0.4s linear;
+  &:hover{
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    cursor: pointer;
+  }
+}
