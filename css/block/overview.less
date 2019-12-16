@@ -1,0 +1,28 @@
+//main: ../style.less
+.overview {
+  width: 100%;
+  height: 350px;
+  background-color: @blue;
+}
+.overview__content {
+  display: flex;
+  padding: 96px 0;
+}
+.overview__item {
+  width: 25%;
+  border-right: 1px solid;
+  border-color: rgba(@white, 0.3);
+  &:last-child {
+    border-right: none;
+  }
+  img {
+    margin-bottom: 2rem;
+  }
+  p {
+    font-size: 1.9rem;
+    font-family: @josefin;
+    color: @white;
+    font-weight: 700;
+    line-height: 1.111;
+  }
+}
