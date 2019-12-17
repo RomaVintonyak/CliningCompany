@@ -1,0 +1,142 @@
+//main: ../style.less
+.blog {
+  margin-top: 25rem;
+}
+.blog__header {
+  padding: 0 20rem;
+  h2 {
+    font-size: 3rem;
+    color: @gray;
+    font-weight: 700;
+    line-height: 0.372;
+    margin-bottom: 3rem;
+  }
+  p {
+    font-size: 1.2rem;
+    font-family: @josefin;
+    color: @gray-l;
+    line-height: 1.333;
+    font-weight: 400;
+    &::after {
+      content: "";
+      display: block;
+      width: 4rem;
+      height: 2px;
+      background-color: @orange;
+      margin: 1rem auto;
+    }
+  }
+}
+.blog__content {
+  margin-top: 4rem;
+  display: flex;
+}
+.blog__colum {
+  width: 50%;
+  margin-right: 4rem;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.blog__img {
+  position: absolute;
+}
+.blog__date {
+  position: relative;
+  top: 2rem;
+  left: 0;
+  font-size: 1.1rem;
+  font-family: @josefin;
+  font-weight: 400;
+  color: @white;
+  background-color: @orange;
+  padding: 0.5rem;
+  width: 20%;
+  &--sm {
+    width: 35%;
+    font-size: 0.6rem;
+  }
+}
+.blog__text {
+  margin-top: 22rem;
+  &--sm {
+    margin-top: 0;
+  }
+  h3 {
+    font-size: 1.4rem;
+    color: @gray-l;
+    font-weight: 700;
+    line-height: 0.727;
+  }
+  p {
+    font-family: @josefin;
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: @gray-l;
+    margin-top: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  a {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: @gray-l;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+.blog__text--sm {
+  p {
+    margin: 0.5rem 0;
+  }
+}
+.blog__icon {
+  margin-top: 1rem;
+  display: flex;
+  &--sm {
+    margin-top: 0.5rem;
+  }
+  div {
+    margin-right: 1.5rem;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover{
+        cursor: pointer;
+    }
+  }
+  i {
+    color: @orange;
+    margin-right: 0.3rem;
+  }
+  span {
+    font-family: @josefin;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: @gray-l;
+  }
+}
+.blog__colum-right {
+  display: flex;
+  flex-wrap: wrap;
+    &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: fade(@gray-l, 40);
+    margin-top: 3rem;
+  }
+  &--bottom{
+      margin-top: 3rem;
+      &::after{
+          display: none;
+      }
+  }
+}
+.content__right {
+  width: 40%;
+}
+.content__left {
+  width: 60%;
+}
