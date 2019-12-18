@@ -11,7 +11,15 @@
   background-color: rgba(@blue, 0.1);
   height: 100%;
   padding-top: 18rem;
-  padding-bottom: 12rem;
+  @media @tablet{
+    padding-top: 12rem;
+  }
+  @media @mobile{
+    padding-top: 8rem;
+  }
+  @media @mobile-sm{
+    padding-top: 15rem;
+  }
 }
 .intro__subtitle {
   font-size: 1.6rem;
@@ -25,4 +33,7 @@
   color: @white;
   font-weight: 800;
   margin-bottom: 2rem;
+  @media @mobile-sm{
+    font-size: 2.5rem;
+  }
 }
