@@ -609,7 +609,14 @@
     <!--wow.js https://wowjs.uk-->
     <script type="text/javascript" src="js/vendor/wow.min.js"></script>
     <script type="text/javascript">
-      new WOW().init();
+      wow = new WOW({
+        boxClass: "wow",
+        animateClass: "animated",
+        offset: 0,
+        mobile: false,
+        live: true
+      });
+      wow.init();
     </script>
     <!--main script-->
     <script type="text/javascript" src="js/main.js"></script>

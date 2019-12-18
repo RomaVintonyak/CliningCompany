@@ -1,0 +1,33 @@
+//main: ../style.less
+#back__top {
+  position: fixed;
+  z-index: 10;
+  bottom: 2rem;
+  right: 2rem;
+  width: 35px;
+  height: 35px;
+  background-color: @orange;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.4s linear;
+  a {
+    color: transparent;
+    font-size: 0;
+    text-decoration: none;
+    width: 10px;
+    height: 10px;
+    
+    border-top: 2px solid @white;
+    border-right: 2px solid @white;
+    transform: rotate(-45deg);
+  }
+  &:hover {
+    background-color: #c78e38;
+    cursor: pointer;
+  }
+  &:active {
+    background-color: #a37228;
+  }
+}
