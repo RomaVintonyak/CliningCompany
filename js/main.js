@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
   /*global variables*/
   /*scrool top*/
   var top_button = $("#back__top");
@@ -11,14 +11,14 @@ $(function() {
   var workSlider = $("[data-slider]");
   /*scrool to top function*/
   top_button.hide();
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
       top_button.fadeIn();
     } else {
       top_button.fadeOut();
     }
   });
-  top_button.click(function(event) {
+  top_button.click(function (event) {
     event.preventDefault();
     $("body, html").animate(
       {
@@ -29,23 +29,43 @@ $(function() {
     return false;
   });
   /*our servicess */
-  btn_prev.on("click", function(event) {
+  btn_prev.on("click", function (event) {
     event.preventDefault();
     $("#services__card1").toggleClass("active__card");
   });
-  btn_next.on("click", function(event) {
+  btn_next.on("click", function (event) {
     event.preventDefault();
     $("#services__card3").toggleClass("active__card");
   });
   /*filter category*/
-  filter.on("click", function(event) {
+  filter.on("click", function (event) {
     event.preventDefault();
     $(this).toggleClass("link__active");
+
+    if ($(this).hasClass("link__active")) {
+      $(this).addClass("link__active");
+    } else {
+      $(this).removeClass("link__active");
+    }
+
+
+
+    /*$(function() {
+      $.each($("[data-filter]"), function(i, el) {
+        /*$(el).toggleClass("link__active");*/
+    /*setTimeout(function() {
+      $(el).addClass("link__active");
+    }, 500 + (i * 500));*/
+
+    /*});
+  });*/
+
+
     var cat = $(this).data("filter");
     if (cat == "all") {
       $("[data-cat]").removeClass("hide");
     } else {
-      $("[data-cat]").each(function() {
+      $("[data-cat]").each(function () {
         var workCat = $(this).data("cat");
         if (workCat != cat) {
           $(this).addClass("hide");
@@ -55,27 +75,27 @@ $(function() {
       });
     }
   });
-    /*Slick slider https://kenwheeler.github.io/slick */
-    workSlider.slick({
-      infinite: true,
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      fade: true,
-      arrows: true,
-      dots: true
-    });
-    $("#reviews-prev").on("click", function(event) {
-      event.preventDefault();
-      var curentSlider = $(this)
-        .parents(".reviews__button")
-        .find('[data-slider="slick"]');
-      curentSlider.slick("slickPrev");
-    });
-    $("#reviews-next").on("click", function(event) {
-      event.preventDefault();
-      var curentSlider = $(this)
-        /*.parents(".reviews__button")*/
-        .find('[data-slider="slick"]');
-      curentSlider.slick("slickNext");
-    });
+  /*Slick slider https://kenwheeler.github.io/slick */
+  workSlider.slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    fade: true,
+    arrows: false,
+    dots: true
+  });
+  $("#reviews-prev").on("click", function (event) {
+    event.preventDefault();
+    var curentSlider = $(this)
+      .parents(".container")
+      .find('[data-slider="slider"]');
+    curentSlider.slick("slickPrev");
+  });
+  $("#reviews-next").on("click", function (event) {
+    event.preventDefault();
+    var curentSlider = $(this)
+      .parents(".container")
+      .find('[data-slider="slider"]');
+    curentSlider.slick("slickNext");
+  });
 });
