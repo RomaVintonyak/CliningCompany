@@ -3,6 +3,12 @@
   margin: 8rem 1.3rem;
   height: 635px;
   width: 100%;
+  @media @mobile{
+    margin: 3rem 0;
+  }
+  @media @mobile-sm{
+    margin: 2rem 0;;
+  }
 }
 .choose__content {
   display: flex;
@@ -10,10 +16,25 @@
 .collum__left {
   width: 40%;
   margin-right: 4rem;
+  @media @notebook{
+    margin-right: 2rem;
+    width: 30%;
+  }
+  @media @tablet{
+    display: none;
+  }
 }
 .collum__right {
   text-align: left;
   width: 60%;
+  @media @notebook{
+    width: 70%;
+    padding-right: 1rem;
+  }
+  @media @tablet{
+    width: 100%;
+    padding-right: 0;
+  }
 }
 .collum__subtitle {
   font-size: 1.2rem;
@@ -29,6 +50,10 @@
     background-color: @orange;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    @media @mobile{
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 .collum__tittle {
@@ -37,6 +62,13 @@
   font-weight: 600;
   line-height: 1.279;
   margin-bottom: 4rem;
+  @media @mobile{
+    margin-bottom: 2rem;
+  }
+  @media @mobile-sm{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
 }
 .collum__content {
   margin-bottom: 1rem;
@@ -46,12 +78,24 @@
   i {
     color: @orange;
     margin-right: 3rem;
+    @media @mobile{
+      margin-right: 0.6rem;
+    }
+    @media @mobile-sm{
+      margin-right: 0.3rem;
+    }
   }
   span {
     font-family: @josefin;
     font-weight: 400;
     font-size: 1.3rem;
     color: @gray-l;
+    @media @mobile{
+      font-size: 1rem;
+    }
+    @media @mobile{
+      font-size: 0.6rem;
+    }
   }
 }
 .collum__sertificate {
@@ -62,12 +106,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  @media @mobile{
+    margin-top: 2rem;
+  }
+  @media @mobile-sm{
+    width: 200px;
+    height: 70px;
+  }
   img {
     margin-right: 1.2rem;
+    @media @mobile-sm{
+      margin-right: 0.8rem;
+    }
   }
   p {
     color: @white;
     font-size: 1.2rem;
     font-weight: 700;
+    @media @mobile-sm{
+      font-size: 1rem;
+    }
   }
 }

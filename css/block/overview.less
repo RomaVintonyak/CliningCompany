@@ -3,10 +3,16 @@
   width: 100%;
   height: 350px;
   background-color: @blue;
+  @media @mobile-sm{
+    height: 300px;
+  }
 }
 .overview__content {
   display: flex;
   padding: 96px 40px;
+  @media @mobile{
+    padding: 90px 5px;
+  }
 }
 .overview__item {
   width: 25%;
@@ -24,5 +30,11 @@
     color: @white;
     font-weight: 700;
     line-height: 1.111;
+    @media @mobile{
+      font-size: 1rem;
+    }
+    @media @mobile-sm{
+      font-size: 0.7rem;
+    }
   }
 }
