@@ -7,6 +7,8 @@ $(function() {
   var btn_next = $("#servicesBNext");
   /*filter category*/
   var filter = $("[data-filter]");
+  /*slider reviews */
+  var workSlider = $("[data-slider]");
   /*scrool to top function*/
   top_button.hide();
   $(window).scroll(function() {
@@ -53,4 +55,27 @@ $(function() {
       });
     }
   });
+    /*Slick slider https://kenwheeler.github.io/slick */
+    workSlider.slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      arrows: true,
+      dots: true
+    });
+    $("#reviews-prev").on("click", function(event) {
+      event.preventDefault();
+      var curentSlider = $(this)
+        .parents(".reviews__button")
+        .find('[data-slider="slick"]');
+      curentSlider.slick("slickPrev");
+    });
+    $("#reviews-next").on("click", function(event) {
+      event.preventDefault();
+      var curentSlider = $(this)
+        /*.parents(".reviews__button")*/
+        .find('[data-slider="slick"]');
+      curentSlider.slick("slickNext");
+    });
 });

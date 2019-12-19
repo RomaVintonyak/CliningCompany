@@ -71,9 +71,7 @@
   [dir="rtl"] & {
     float: right;
   }
-  img {
-    display: block;
-  }
+  
   &.slick-loading img {
     display: none;
   }
@@ -101,6 +99,16 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
+.slick-arrow{
+  width: 40px;
+  height: 40px;
+  background-color: @white;
+  opacity: 0.7;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .slick-dots {
   display: flex;
   justify-content: center;
@@ -110,7 +118,7 @@
   list-style: none;
 
   position: absolute;
-  bottom: 1.4rem;
+  bottom: 0.5rem;
   left: 0;
   z-index: 2;
   li {
