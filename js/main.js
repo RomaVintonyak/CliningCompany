@@ -112,4 +112,14 @@ $(function() {
       1200
     );
   });
+  /*add class to burger__active*/
+  $("#burgerToggle").on("click", function(event) {
+    event.preventDefault();
+    $(".burger__icon").toggleClass("show");
+  });
+  /*add clas to nav menu show*/
+  $("#burgerToggle").on("click", function(event) {
+    event.preventDefault();
+    $(".nav__menu").toggleClass("nav__menu--show");
+  });
 });

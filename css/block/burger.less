@@ -1,7 +1,7 @@
 //main: ../style.less
 .burger__button {
   display: none;
-  @media @tablet{
+  @media @tablet {
     display: flex;
     justify-content: center;
     width: 33.33333%;
@@ -11,18 +11,27 @@
   content: "";
   display: block;
   position: relative;
-  width: 40px;
-  height: 3px;
+  width: 60px;
+  height: 4px;
   background-color: @orange;
+  cursor: pointer;
+  &.show {
+    background-color: transparent;
+  }
   &::before {
     content: "";
     position: absolute;
     top: -10px;
     left: 0;
     z-index: 1;
-    width: 40px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background-color: @orange;
+  }
+  &.show::before {
+    transform-origin: right bottom;
+    transform: rotate(-45deg) translate3d(7px, -3px, 0);
+    transition: all 0.9s linear;
   }
   &::after {
     content: "";
@@ -30,8 +39,13 @@
     bottom: -10px;
     left: 0;
     z-index: 1;
-    width: 40px;
-    height: 3px;
+    width: 60px;
+    height: 4px;
     background-color: @orange;
+  }
+  &.show::after {
+    transform-origin: right bottom;
+    transform: rotate(45deg) translate3d(12px, 10px, 0);
+    transition: all 0.9s linear;
   }
 }

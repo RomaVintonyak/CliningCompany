@@ -3,8 +3,17 @@
   width: 70%;
   display: flex;
   justify-content: center;
-  @media @tablet{
+  @media @tablet {
     display: none;
+  }
+  &--show {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    top: 7.3rem;
+    background-color: @white;
   }
 }
 .nav__link {
@@ -30,7 +39,7 @@
   &:last-child {
     margin-right: 0;
   }
-  &--active{
+  &--active {
     color: @orange;
   }
 }
