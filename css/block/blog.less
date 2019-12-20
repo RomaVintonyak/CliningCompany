@@ -71,6 +71,14 @@
 }
 .blog__img {
   position: absolute;
+  @media (max-width:650px){
+    width: 400px;
+    height: 280px;
+  }
+  @media (max-width:440px){
+    width: 280px;
+    height: 180px;
+  }
 }
 .blog__colum--img{
   position: absolute;
@@ -95,17 +103,11 @@
 }
 .blog__text {
   margin-top: 22rem;
-  @media @notebook{
+  @media (max-width:650px){
     margin-top: 18rem;
   }
-  @media @tablet{
-    margin-top: 14.5rem;
-  }
-  @media @mobile{
+  @media (max-width:440px){
     margin-top: 10rem;
-  }
-  @media @mobile-sm{
-    margin-top: 5rem;
   }
   &--sm {
     margin-top: 0;
