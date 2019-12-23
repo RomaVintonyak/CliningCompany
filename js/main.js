@@ -99,6 +99,7 @@ $(function() {
     var blockID = $(this).data("scroll");
     var blockofSet = $(blockID).offset().top;
     $("#togleMenu").removeClass("nav__menu--show");
+    $(".burger__icon").removeClass("show");
     $("html, body").animate(
       {
         scrollTop: blockofSet - 70
