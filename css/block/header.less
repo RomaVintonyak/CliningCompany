@@ -1,21 +1,29 @@
 //main: ../style.less
+.fixed__header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  background-color: @gray-l;
+}
 .header__top {
   width: 100%;
   height: 3.5rem;
   background-color: @blue;
   display: flex;
   align-items: center;
-  @media @tablet{
+  @media @tablet {
     height: 4.5rem;
   }
 }
 .header__top-block {
   display: flex;
   justify-content: space-between;
-  @media @tablet{
+  @media @tablet {
     align-items: center;
   }
-  @media @mobile{
+  @media @mobile {
     justify-content: center;
     flex-wrap: wrap;
   }
@@ -23,21 +31,21 @@
 .top__content {
   display: flex;
   width: 80%;
-  @media @tablet{
+  @media @tablet {
     flex-wrap: wrap;
     justify-content: center;
   }
-  @media @mobile{
+  @media @mobile {
     display: none;
   }
 }
 .content__row {
   display: flex;
   margin-right: 3rem;
-  @media @tablet{
+  @media @tablet {
     margin-right: 0.5;
     margin-bottom: 0.7rem;
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -59,7 +67,7 @@
   width: 20%;
   display: flex;
   justify-content: flex-end;
-  @media @mobile{
+  @media @mobile {
     width: 100%;
     justify-content: center;
   }
@@ -68,7 +76,7 @@
     color: @white;
     margin-right: 2rem;
     transition: color 0.4s linear, transform 0.4s linear;
-    @media @mobile{
+    @media @mobile {
       font-size: 2rem;
     }
     &:last-child {
@@ -81,25 +89,25 @@
     }
   }
 }
-.header__bottom{
-  display: flex; 
+.header__bottom {
+  display: flex;
   height: 8rem;
   align-items: center;
   justify-content: center;
-  @media @tablet{
+  @media @tablet {
     justify-content: space-between;
     height: 6rem;
   }
 }
-.header__logo{
+.header__logo {
   width: 15%;
-  @media @tablet{
+  @media @tablet {
     width: 33.33333%;
   }
 }
-.header__button{
+.header__button {
   width: 15%;
-  @media @tablet{
+  @media @tablet {
     width: 33.33333%;
     display: flex;
     justify-content: flex-end;
