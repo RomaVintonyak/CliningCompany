@@ -40,13 +40,17 @@ $(function() {
   /*filter category*/
   filter.on("click", function(event) {
     event.preventDefault();
-    var filterValue = $($(this), ".links__project-attr").attr("data-filter");
-    console.log(filterValue);
-    if (filterValue == "all") {
-      $(this).addClass("link__active");
-    } else {
-      $(this).toggleClass("link__active");
-    }
+    /*add clas active for links*/
+    $("[data-filter]")
+      .click(function(event){
+        event.preventDefault();
+        $("[data-filter]")
+          .removeClass("link__active")
+          .eq($(this).index())
+          .addClass("link__active");
+      })
+      .eq($(this))
+      .addClass("link__active");
     var cat = $(this).data("filter");
     if (cat == "all") {
       $("[data-cat]").removeClass("hide");
