@@ -105,6 +105,7 @@ $(function() {
     event.preventDefault();
     var blockID = $(this).data("scroll");
     var blockofSet = $(blockID).offset().top;
+    $("#togleMenu").removeClass("nav__menu--show");
     $("html, body").animate(
       {
         scrollTop: blockofSet - 70
@@ -120,6 +121,6 @@ $(function() {
   /*add clas to nav menu show*/
   $("#burgerToggle").on("click", function(event) {
     event.preventDefault();
-    $(".nav__menu").toggleClass("nav__menu--show");
+    $("#togleMenu").toggleClass("nav__menu--show");
   });
 });

@@ -9,11 +9,21 @@
   &--show {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
-    position: relative;
-    top: 7.3rem;
+    position: absolute;
+    padding-left: 1rem;
     background-color: @white;
+    top: 10.5rem;
+    right: 0;
+    align-items: center;
+    z-index: 5;
+  }
+  &--show .nav__link{
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 }
 .nav__link {

@@ -1,10 +1,16 @@
 //main: ../style.less
 .burger__button {
   display: none;
+  width: 100%;
+  height: 100%;
   @media @tablet {
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 33.33333%;
+  }
+  &:hover{
+    cursor: pointer;
   }
 }
 .burger__icon {
@@ -29,8 +35,8 @@
     background-color: @orange;
   }
   &.show::before {
-    transform-origin: right bottom;
-    transform: rotate(-45deg) translate3d(7px, -3px, 0);
+    transform-origin: 80% /*right bottom*/;
+    transform: rotate(-40deg) translate3d(0, 0, 0);
     transition: all 0.9s linear;
   }
   &::after {
@@ -44,8 +50,8 @@
     background-color: @orange;
   }
   &.show::after {
-    transform-origin: right bottom;
-    transform: rotate(45deg) translate3d(12px, 10px, 0);
+    transform-origin: 70% /*right bottom*/;
+    transform: rotate(40deg) translate3d(0, 0, 0);
     transition: all 0.9s linear;
   }
 }
